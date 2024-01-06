@@ -1,0 +1,116 @@
+// global.scss
+@import 'variables';
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms-Thin.otf') format('opentype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms-Heavy.otf') format('opentype');
+  font-weight: 900;
+}
+
+
+body {
+  font-family: 'TT Norms', 'Arial', sans-serif;;
+  background-color: white;
+  color: $grey;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  &.inactive {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.background_green {
+  background-color: $green-bg;
+}
+
+.btn_red {
+  width: 156px;
+  height: 45px;
+  color: white;
+  background-color: $red-bg;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+}
+
+.mt_15 {
+  margin-top: 15px;
+}
+
+.mt_30 {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1240px) {
+  .container {
+    padding: 0 24px;
+  }
+}

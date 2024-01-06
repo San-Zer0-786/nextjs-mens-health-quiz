@@ -1,0 +1,154 @@
+// ServiceSection.scss
+@import 'variables';
+
+.serviceSection_heading {
+    font-family: TT Norms;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: -0.03em;
+    color: $green-dark;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.serviceSection_container {
+    padding: 70px 0px;
+    color: $green;
+}
+.serviceSection {
+    display: flex;
+    padding: 0 10em;
+  }
+  
+.imageSection {
+flex: 1;
+}
+
+.contentSection {
+    width: 40%;
+    flex-basis: 40%;
+    align-self: center;
+    position: relative;
+    .service_name {
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    .service_description {
+      font-size: 28px;
+      font-weight: 500;
+      margin-top: 12px;
+      margin-bottom: 28px;
+      color: $green-dark;
+    }
+    .service_content{
+      line-height: 30px;
+      font-size: 18px;
+    }
+}
+
+.backgroundText {
+  position: absolute;
+  top: 50%;
+  left: -25%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  pointer-events: none;
+  z-index: -2;
+  &.reverseOrder {
+    left: unset;
+    right: -70%;
+    flex-direction: row;
+  }
+}
+
+.bigText {
+  color: var(--grandfather-80, #F3F7F4);
+  font-size: 450px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 450px; 
+  letter-spacing: -13.5px;
+}
+
+
+
+/* class to reverse the order, if passed prop */
+.reverseOrder {
+    flex-direction: row-reverse;
+    .imageSection {
+        text-align: right;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .serviceSection {
+      padding: 0 4em;
+    }
+    .backgroundText {
+      left: -25%;
+      &.reverseOrder {
+        left: unset;
+        right: -60%;
+      }
+    }
+  }
+  
+@media screen and (max-width: 768px) {
+  .serviceSection_container {
+      padding: 35px 0;
+  }
+
+  .serviceSection_heading {
+      margin-bottom: 35px;
+  }
+
+  .serviceSection {
+    flex-direction: column;
+    padding: 0 2em;
+  }
+
+  .contentSection {
+    width: 100%;
+    margin-top: 20px;
+    order: -1;
+  }
+  .imageSection {
+      margin-top: 30px;
+      text-align: center!important;
+      img {
+      width: 100%;
+      height: auto;
+      }
+  }
+  .backgroundText {
+    left: 50%;
+    &.reverseOrder {
+      left: unset;
+      right: -50%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bigText {
+    font-size: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bigText {
+    font-size: 240px;
+  }
+}
+
+// for pesky fold devices...
+@media screen and (max-width: 300px) {
+  .bigText {
+    font-size: 200px;
+  }
+}
